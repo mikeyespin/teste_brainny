@@ -35,6 +35,10 @@ class UserController {
         
     };
 
+    async index(req: Request, res: Response) {
+        res.send({ userId: req.userId})
+    }
+
  
 }
 

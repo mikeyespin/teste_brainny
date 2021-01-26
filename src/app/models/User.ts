@@ -14,8 +14,7 @@ class User {
 
     @Column()
     password: string;
-    static password: string;
-    static id: any;
+    
 
     @BeforeInsert()
     hashPassword() {
