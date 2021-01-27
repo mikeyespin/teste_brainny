@@ -5,8 +5,7 @@
     "username": "postgres",
     "password": "147123",
     "database": "Register",
-    "synchronize": true,
-    "logging": false,
+   
     "entities": [
        "src/app/models/*.ts"
     ],

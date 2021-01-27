@@ -1,5 +1,6 @@
-import {  Entity, PrimaryGeneratedColumn, Column, BeforeInsert } from 'typeorm';
+import {  Entity, PrimaryGeneratedColumn, Column, BeforeInsert, OneToMany } from 'typeorm';
 import bcrypt from 'bcryptjs';
+import Time from './Time';
 
 @Entity('user')
 class User {
@@ -9,8 +10,11 @@ class User {
     @Column()
     name: string;
 
+    @OneToMany(type => Time, user => User )
+    time: Time;
+
     @Column()
-    email: string;
+    email: string; 
 
     @Column()
     password: string;
